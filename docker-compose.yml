@@ -1,11 +1,9 @@
-version: "3.8"
-
 services:
   db:
     image: chriseaton/adventureworks:postgres
     container_name: adventureworks-db
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
