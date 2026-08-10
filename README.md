@@ -1,4 +1,4 @@
-\# Buisness Intelligence Copilot 
+# Buisness Intelligence Copilot 
 
 
 
@@ -6,7 +6,7 @@ A natural-language business intelligence agent that answers questions over a rel
 
 
 
-\## Database
+## Database
 
 
 
@@ -14,7 +14,7 @@ This project uses the AdventureWorks database, Microsoft's official sample enter
 
 
 
-\## Setup
+## Setup
 
 
 
