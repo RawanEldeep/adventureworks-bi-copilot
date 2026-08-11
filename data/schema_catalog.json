@@ -1,0 +1,1050 @@
+[
+  {
+    "schema": "HumanResources",
+    "table": "Department",
+    "columns": [
+      "DepartmentID",
+      "Name",
+      "GroupName",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "HumanResources",
+    "table": "Employee",
+    "columns": [
+      "BusinessEntityID",
+      "NationalIDNumber",
+      "LoginID",
+      "OrganizationNode",
+      "OrganizationLevel",
+      "JobTitle",
+      "BirthDate",
+      "MaritalStatus",
+      "Gender",
+      "HireDate",
+      "SalariedFlag",
+      "VacationHours",
+      "SickLeaveHours",
+      "CurrentFlag",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "HumanResources",
+    "table": "EmployeeDepartmentHistory",
+    "columns": [
+      "BusinessEntityID",
+      "DepartmentID",
+      "ShiftID",
+      "StartDate",
+      "EndDate",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "HumanResources",
+    "table": "EmployeePayHistory",
+    "columns": [
+      "BusinessEntityID",
+      "RateChangeDate",
+      "Rate",
+      "PayFrequency",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "HumanResources",
+    "table": "JobCandidate",
+    "columns": [
+      "JobCandidateID",
+      "BusinessEntityID",
+      "Resume",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "HumanResources",
+    "table": "Shift",
+    "columns": [
+      "ShiftID",
+      "Name",
+      "StartTime",
+      "EndTime",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "HumanResources",
+    "table": "vEmployee",
+    "columns": [
+      "BusinessEntityID",
+      "Title",
+      "FirstName",
+      "MiddleName",
+      "LastName",
+      "Suffix",
+      "JobTitle",
+      "PhoneNumber",
+      "PhoneNumberType",
+      "EmailAddress",
+      "EmailPromotion",
+      "AddressLine1",
+      "AddressLine2",
+      "City",
+      "StateProvinceName",
+      "PostalCode",
+      "CountryRegionName",
+      "AdditionalContactInfo"
+    ]
+  },
+  {
+    "schema": "HumanResources",
+    "table": "vEmployeeDepartment",
+    "columns": [
+      "BusinessEntityID",
+      "Title",
+      "FirstName",
+      "MiddleName",
+      "LastName",
+      "Suffix",
+      "JobTitle",
+      "Department",
+      "GroupName",
+      "StartDate"
+    ]
+  },
+  {
+    "schema": "HumanResources",
+    "table": "vEmployeeDepartmentHistory",
+    "columns": [
+      "BusinessEntityID",
+      "Title",
+      "FirstName",
+      "MiddleName",
+      "LastName",
+      "Suffix",
+      "Shift",
+      "Department",
+      "GroupName",
+      "StartDate",
+      "EndDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "Address",
+    "columns": [
+      "AddressID",
+      "AddressLine1",
+      "AddressLine2",
+      "City",
+      "StateProvinceID",
+      "PostalCode",
+      "SpatialLocation",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "AddressType",
+    "columns": [
+      "AddressTypeID",
+      "Name",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "BusinessEntity",
+    "columns": [
+      "BusinessEntityID",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "BusinessEntityAddress",
+    "columns": [
+      "BusinessEntityID",
+      "AddressID",
+      "AddressTypeID",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "BusinessEntityContact",
+    "columns": [
+      "BusinessEntityID",
+      "PersonID",
+      "ContactTypeID",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "ContactType",
+    "columns": [
+      "ContactTypeID",
+      "Name",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "CountryRegion",
+    "columns": [
+      "CountryRegionCode",
+      "Name",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "EmailAddress",
+    "columns": [
+      "BusinessEntityID",
+      "EmailAddressID",
+      "EmailAddress",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "Password",
+    "columns": [
+      "BusinessEntityID",
+      "PasswordHash",
+      "PasswordSalt",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "Person",
+    "columns": [
+      "BusinessEntityID",
+      "PersonType",
+      "NameStyle",
+      "Title",
+      "FirstName",
+      "MiddleName",
+      "LastName",
+      "Suffix",
+      "EmailPromotion",
+      "AdditionalContactInfo",
+      "Demographics",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "PersonPhone",
+    "columns": [
+      "BusinessEntityID",
+      "PhoneNumber",
+      "PhoneNumberTypeID",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "PhoneNumberType",
+    "columns": [
+      "PhoneNumberTypeID",
+      "Name",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Person",
+    "table": "StateProvince",
+    "columns": [
+      "StateProvinceID",
+      "StateProvinceCode",
+      "CountryRegionCode",
+      "IsOnlyStateProvinceFlag",
+      "Name",
+      "TerritoryID",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "BillOfMaterials",
+    "columns": [
+      "BillOfMaterialsID",
+      "ProductAssemblyID",
+      "ComponentID",
+      "StartDate",
+      "EndDate",
+      "UnitMeasureCode",
+      "BOMLevel",
+      "PerAssemblyQty",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "Culture",
+    "columns": [
+      "CultureID",
+      "Name",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "Document",
+    "columns": [
+      "DocumentNode",
+      "DocumentLevel",
+      "Title",
+      "Owner",
+      "FolderFlag",
+      "FileName",
+      "FileExtension",
+      "Revision",
+      "ChangeNumber",
+      "Status",
+      "DocumentSummary",
+      "Document",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "Illustration",
+    "columns": [
+      "IllustrationID",
+      "Diagram",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "Location",
+    "columns": [
+      "LocationID",
+      "Name",
+      "CostRate",
+      "Availability",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "Product",
+    "columns": [
+      "ProductID",
+      "Name",
+      "ProductNumber",
+      "MakeFlag",
+      "FinishedGoodsFlag",
+      "Color",
+      "SafetyStockLevel",
+      "ReorderPoint",
+      "StandardCost",
+      "ListPrice",
+      "Size",
+      "SizeUnitMeasureCode",
+      "WeightUnitMeasureCode",
+      "Weight",
+      "DaysToManufacture",
+      "ProductLine",
+      "Class",
+      "Style",
+      "ProductSubcategoryID",
+      "ProductModelID",
+      "SellStartDate",
+      "SellEndDate",
+      "DiscontinuedDate",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductCategory",
+    "columns": [
+      "ProductCategoryID",
+      "Name",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductCostHistory",
+    "columns": [
+      "ProductID",
+      "StartDate",
+      "EndDate",
+      "StandardCost",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductDescription",
+    "columns": [
+      "ProductDescriptionID",
+      "Description",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductDocument",
+    "columns": [
+      "ProductID",
+      "DocumentNode",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductInventory",
+    "columns": [
+      "ProductID",
+      "LocationID",
+      "Shelf",
+      "Bin",
+      "Quantity",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductListPriceHistory",
+    "columns": [
+      "ProductID",
+      "StartDate",
+      "EndDate",
+      "ListPrice",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductModel",
+    "columns": [
+      "ProductModelID",
+      "Name",
+      "CatalogDescription",
+      "Instructions",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductModelIllustration",
+    "columns": [
+      "ProductModelID",
+      "IllustrationID",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductModelProductDescriptionCulture",
+    "columns": [
+      "ProductModelID",
+      "ProductDescriptionID",
+      "CultureID",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductPhoto",
+    "columns": [
+      "ProductPhotoID",
+      "ThumbNailPhoto",
+      "ThumbnailPhotoFileName",
+      "LargePhoto",
+      "LargePhotoFileName",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductProductPhoto",
+    "columns": [
+      "ProductID",
+      "ProductPhotoID",
+      "Primary",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductReview",
+    "columns": [
+      "ProductReviewID",
+      "ProductID",
+      "ReviewerName",
+      "ReviewDate",
+      "EmailAddress",
+      "Rating",
+      "Comments",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ProductSubcategory",
+    "columns": [
+      "ProductSubcategoryID",
+      "ProductCategoryID",
+      "Name",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "ScrapReason",
+    "columns": [
+      "ScrapReasonID",
+      "Name",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "TransactionHistory",
+    "columns": [
+      "TransactionID",
+      "ProductID",
+      "ReferenceOrderID",
+      "ReferenceOrderLineID",
+      "TransactionDate",
+      "TransactionType",
+      "Quantity",
+      "ActualCost",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "TransactionHistoryArchive",
+    "columns": [
+      "TransactionID",
+      "ProductID",
+      "ReferenceOrderID",
+      "ReferenceOrderLineID",
+      "TransactionDate",
+      "TransactionType",
+      "Quantity",
+      "ActualCost",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "UnitMeasure",
+    "columns": [
+      "UnitMeasureCode",
+      "Name",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "WorkOrder",
+    "columns": [
+      "WorkOrderID",
+      "ProductID",
+      "OrderQty",
+      "StockedQty",
+      "ScrappedQty",
+      "StartDate",
+      "EndDate",
+      "DueDate",
+      "ScrapReasonID",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Production",
+    "table": "WorkOrderRouting",
+    "columns": [
+      "WorkOrderID",
+      "ProductID",
+      "OperationSequence",
+      "LocationID",
+      "ScheduledStartDate",
+      "ScheduledEndDate",
+      "ActualStartDate",
+      "ActualEndDate",
+      "ActualResourceHrs",
+      "PlannedCost",
+      "ActualCost",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Purchasing",
+    "table": "ProductVendor",
+    "columns": [
+      "ProductID",
+      "BusinessEntityID",
+      "AverageLeadTime",
+      "StandardPrice",
+      "LastReceiptCost",
+      "LastReceiptDate",
+      "MinOrderQty",
+      "MaxOrderQty",
+      "OnOrderQty",
+      "UnitMeasureCode",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Purchasing",
+    "table": "PurchaseOrderDetail",
+    "columns": [
+      "PurchaseOrderID",
+      "PurchaseOrderDetailID",
+      "DueDate",
+      "OrderQty",
+      "ProductID",
+      "UnitPrice",
+      "LineTotal",
+      "ReceivedQty",
+      "RejectedQty",
+      "StockedQty",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Purchasing",
+    "table": "PurchaseOrderHeader",
+    "columns": [
+      "PurchaseOrderID",
+      "RevisionNumber",
+      "Status",
+      "EmployeeID",
+      "VendorID",
+      "ShipMethodID",
+      "OrderDate",
+      "ShipDate",
+      "SubTotal",
+      "TaxAmt",
+      "Freight",
+      "TotalDue",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Purchasing",
+    "table": "ShipMethod",
+    "columns": [
+      "ShipMethodID",
+      "Name",
+      "ShipBase",
+      "ShipRate",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Purchasing",
+    "table": "Vendor",
+    "columns": [
+      "BusinessEntityID",
+      "AccountNumber",
+      "Name",
+      "CreditRating",
+      "PreferredVendorStatus",
+      "ActiveFlag",
+      "PurchasingWebServiceURL",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Purchasing",
+    "table": "vVendorWithAddresses",
+    "columns": [
+      "BusinessEntityID",
+      "Name",
+      "AddressType",
+      "AddressLine1",
+      "AddressLine2",
+      "City",
+      "StateProvinceName",
+      "PostalCode",
+      "CountryRegionName"
+    ]
+  },
+  {
+    "schema": "Purchasing",
+    "table": "vVendorWithContacts",
+    "columns": [
+      "BusinessEntityID",
+      "Name",
+      "ContactType",
+      "Title",
+      "FirstName",
+      "MiddleName",
+      "LastName",
+      "Suffix",
+      "PhoneNumber",
+      "PhoneNumberType",
+      "EmailAddress",
+      "EmailPromotion"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "CountryRegionCurrency",
+    "columns": [
+      "CountryRegionCode",
+      "CurrencyCode",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "CreditCard",
+    "columns": [
+      "CreditCardID",
+      "CardType",
+      "CardNumber",
+      "ExpMonth",
+      "ExpYear",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "Currency",
+    "columns": [
+      "CurrencyCode",
+      "Name",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "CurrencyRate",
+    "columns": [
+      "CurrencyRateID",
+      "CurrencyRateDate",
+      "FromCurrencyCode",
+      "ToCurrencyCode",
+      "AverageRate",
+      "EndOfDayRate",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "Customer",
+    "columns": [
+      "CustomerID",
+      "PersonID",
+      "StoreID",
+      "TerritoryID",
+      "AccountNumber",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "PersonCreditCard",
+    "columns": [
+      "BusinessEntityID",
+      "CreditCardID",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SalesOrderDetail",
+    "columns": [
+      "SalesOrderID",
+      "SalesOrderDetailID",
+      "CarrierTrackingNumber",
+      "OrderQty",
+      "ProductID",
+      "SpecialOfferID",
+      "UnitPrice",
+      "UnitPriceDiscount",
+      "LineTotal",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SalesOrderHeader",
+    "columns": [
+      "SalesOrderID",
+      "RevisionNumber",
+      "OrderDate",
+      "DueDate",
+      "ShipDate",
+      "Status",
+      "OnlineOrderFlag",
+      "SalesOrderNumber",
+      "PurchaseOrderNumber",
+      "AccountNumber",
+      "CustomerID",
+      "SalesPersonID",
+      "TerritoryID",
+      "BillToAddressID",
+      "ShipToAddressID",
+      "ShipMethodID",
+      "CreditCardID",
+      "CreditCardApprovalCode",
+      "CurrencyRateID",
+      "SubTotal",
+      "TaxAmt",
+      "Freight",
+      "TotalDue",
+      "Comment",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SalesOrderHeaderSalesReason",
+    "columns": [
+      "SalesOrderID",
+      "SalesReasonID",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SalesPerson",
+    "columns": [
+      "BusinessEntityID",
+      "TerritoryID",
+      "SalesQuota",
+      "Bonus",
+      "CommissionPct",
+      "SalesYTD",
+      "SalesLastYear",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SalesPersonQuotaHistory",
+    "columns": [
+      "BusinessEntityID",
+      "QuotaDate",
+      "SalesQuota",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SalesReason",
+    "columns": [
+      "SalesReasonID",
+      "Name",
+      "ReasonType",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SalesTaxRate",
+    "columns": [
+      "SalesTaxRateID",
+      "StateProvinceID",
+      "TaxType",
+      "TaxRate",
+      "Name",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SalesTerritory",
+    "columns": [
+      "TerritoryID",
+      "Name",
+      "CountryRegionCode",
+      "Group",
+      "SalesYTD",
+      "SalesLastYear",
+      "CostYTD",
+      "CostLastYear",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SalesTerritoryHistory",
+    "columns": [
+      "BusinessEntityID",
+      "TerritoryID",
+      "StartDate",
+      "EndDate",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "ShoppingCartItem",
+    "columns": [
+      "ShoppingCartItemID",
+      "ShoppingCartID",
+      "Quantity",
+      "ProductID",
+      "DateCreated",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SpecialOffer",
+    "columns": [
+      "SpecialOfferID",
+      "Description",
+      "DiscountPct",
+      "Type",
+      "Category",
+      "StartDate",
+      "EndDate",
+      "MinQty",
+      "MaxQty",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "SpecialOfferProduct",
+    "columns": [
+      "SpecialOfferID",
+      "ProductID",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "Store",
+    "columns": [
+      "BusinessEntityID",
+      "Name",
+      "SalesPersonID",
+      "Demographics",
+      "rowguid",
+      "ModifiedDate"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "vIndividualCustomer",
+    "columns": [
+      "BusinessEntityID",
+      "Title",
+      "FirstName",
+      "MiddleName",
+      "LastName",
+      "Suffix",
+      "PhoneNumber",
+      "PhoneNumberType",
+      "EmailAddress",
+      "EmailPromotion",
+      "AddressType",
+      "AddressLine1",
+      "AddressLine2",
+      "City",
+      "StateProvinceName",
+      "PostalCode",
+      "CountryRegionName",
+      "Demographics"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "vSalesPerson",
+    "columns": [
+      "BusinessEntityID",
+      "Title",
+      "FirstName",
+      "MiddleName",
+      "LastName",
+      "Suffix",
+      "JobTitle",
+      "PhoneNumber",
+      "PhoneNumberType",
+      "EmailAddress",
+      "EmailPromotion",
+      "AddressLine1",
+      "AddressLine2",
+      "City",
+      "StateProvinceName",
+      "PostalCode",
+      "CountryRegionName",
+      "TerritoryName",
+      "TerritoryGroup",
+      "SalesQuota",
+      "SalesYTD",
+      "SalesLastYear"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "vStoreWithAddresses",
+    "columns": [
+      "BusinessEntityID",
+      "Name",
+      "AddressType",
+      "AddressLine1",
+      "AddressLine2",
+      "City",
+      "StateProvinceName",
+      "PostalCode",
+      "CountryRegionName"
+    ]
+  },
+  {
+    "schema": "Sales",
+    "table": "vStoreWithContacts",
+    "columns": [
+      "BusinessEntityID",
+      "Name",
+      "ContactType",
+      "Title",
+      "FirstName",
+      "MiddleName",
+      "LastName",
+      "Suffix",
+      "PhoneNumber",
+      "PhoneNumberType",
+      "EmailAddress",
+      "EmailPromotion"
+    ]
+  }
+]
