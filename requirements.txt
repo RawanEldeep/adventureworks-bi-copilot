@@ -3,3 +3,4 @@ python-dotenv==1.0.1
 pandas==3.0.5
 nltk==3.9.1
 rank_bm25
+google-genai
