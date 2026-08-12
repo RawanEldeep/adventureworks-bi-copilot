@@ -7,7 +7,7 @@ MODEL = "gemini-3.6-flash"
 def _format_schema_context(retrieved: list[dict]) -> str: 
     lines = []
     for entry in retrieved: 
-        cols = ", ".join(entry["columns"])
+        cols = ", ".join(col["name"] for col in entry["columns"])
         lines.append(f'-"{entry["schema"]}"."{entry["table"]}"(columns:{cols})')
     return "\n".join(lines)
 SYSTEM_PROMPT = """You are an SQL generation engine for the Adventureworks Postgres database.

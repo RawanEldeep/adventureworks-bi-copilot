@@ -3,1048 +3,2806 @@
     "schema": "HumanResources",
     "table": "Department",
     "columns": [
-      "DepartmentID",
-      "Name",
-      "GroupName",
-      "ModifiedDate"
+      {
+        "name": "DepartmentID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "GroupName",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "HumanResources",
     "table": "Employee",
     "columns": [
-      "BusinessEntityID",
-      "NationalIDNumber",
-      "LoginID",
-      "OrganizationNode",
-      "OrganizationLevel",
-      "JobTitle",
-      "BirthDate",
-      "MaritalStatus",
-      "Gender",
-      "HireDate",
-      "SalariedFlag",
-      "VacationHours",
-      "SickLeaveHours",
-      "CurrentFlag",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "NationalIDNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "LoginID",
+        "type": "character varying"
+      },
+      {
+        "name": "OrganizationNode",
+        "type": "text"
+      },
+      {
+        "name": "OrganizationLevel",
+        "type": "integer"
+      },
+      {
+        "name": "JobTitle",
+        "type": "character varying"
+      },
+      {
+        "name": "BirthDate",
+        "type": "date"
+      },
+      {
+        "name": "MaritalStatus",
+        "type": "character"
+      },
+      {
+        "name": "Gender",
+        "type": "character"
+      },
+      {
+        "name": "HireDate",
+        "type": "date"
+      },
+      {
+        "name": "SalariedFlag",
+        "type": "boolean"
+      },
+      {
+        "name": "VacationHours",
+        "type": "smallint"
+      },
+      {
+        "name": "SickLeaveHours",
+        "type": "smallint"
+      },
+      {
+        "name": "CurrentFlag",
+        "type": "boolean"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "HumanResources",
     "table": "EmployeeDepartmentHistory",
     "columns": [
-      "BusinessEntityID",
-      "DepartmentID",
-      "ShiftID",
-      "StartDate",
-      "EndDate",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "DepartmentID",
+        "type": "smallint"
+      },
+      {
+        "name": "ShiftID",
+        "type": "smallint"
+      },
+      {
+        "name": "StartDate",
+        "type": "date"
+      },
+      {
+        "name": "EndDate",
+        "type": "date"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "HumanResources",
     "table": "EmployeePayHistory",
     "columns": [
-      "BusinessEntityID",
-      "RateChangeDate",
-      "Rate",
-      "PayFrequency",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "RateChangeDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "Rate",
+        "type": "numeric"
+      },
+      {
+        "name": "PayFrequency",
+        "type": "smallint"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "HumanResources",
     "table": "JobCandidate",
     "columns": [
-      "JobCandidateID",
-      "BusinessEntityID",
-      "Resume",
-      "ModifiedDate"
+      {
+        "name": "JobCandidateID",
+        "type": "integer"
+      },
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Resume",
+        "type": "xml"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "HumanResources",
     "table": "Shift",
     "columns": [
-      "ShiftID",
-      "Name",
-      "StartTime",
-      "EndTime",
-      "ModifiedDate"
+      {
+        "name": "ShiftID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "StartTime",
+        "type": "time without time zone"
+      },
+      {
+        "name": "EndTime",
+        "type": "time without time zone"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "HumanResources",
     "table": "vEmployee",
     "columns": [
-      "BusinessEntityID",
-      "Title",
-      "FirstName",
-      "MiddleName",
-      "LastName",
-      "Suffix",
-      "JobTitle",
-      "PhoneNumber",
-      "PhoneNumberType",
-      "EmailAddress",
-      "EmailPromotion",
-      "AddressLine1",
-      "AddressLine2",
-      "City",
-      "StateProvinceName",
-      "PostalCode",
-      "CountryRegionName",
-      "AdditionalContactInfo"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Title",
+        "type": "character varying"
+      },
+      {
+        "name": "FirstName",
+        "type": "character varying"
+      },
+      {
+        "name": "MiddleName",
+        "type": "character varying"
+      },
+      {
+        "name": "LastName",
+        "type": "character varying"
+      },
+      {
+        "name": "Suffix",
+        "type": "character varying"
+      },
+      {
+        "name": "JobTitle",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumberType",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailPromotion",
+        "type": "integer"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "character varying"
+      },
+      {
+        "name": "City",
+        "type": "character varying"
+      },
+      {
+        "name": "StateProvinceName",
+        "type": "character varying"
+      },
+      {
+        "name": "PostalCode",
+        "type": "character varying"
+      },
+      {
+        "name": "CountryRegionName",
+        "type": "character varying"
+      },
+      {
+        "name": "AdditionalContactInfo",
+        "type": "xml"
+      }
     ]
   },
   {
     "schema": "HumanResources",
     "table": "vEmployeeDepartment",
     "columns": [
-      "BusinessEntityID",
-      "Title",
-      "FirstName",
-      "MiddleName",
-      "LastName",
-      "Suffix",
-      "JobTitle",
-      "Department",
-      "GroupName",
-      "StartDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Title",
+        "type": "character varying"
+      },
+      {
+        "name": "FirstName",
+        "type": "character varying"
+      },
+      {
+        "name": "MiddleName",
+        "type": "character varying"
+      },
+      {
+        "name": "LastName",
+        "type": "character varying"
+      },
+      {
+        "name": "Suffix",
+        "type": "character varying"
+      },
+      {
+        "name": "JobTitle",
+        "type": "character varying"
+      },
+      {
+        "name": "Department",
+        "type": "character varying"
+      },
+      {
+        "name": "GroupName",
+        "type": "character varying"
+      },
+      {
+        "name": "StartDate",
+        "type": "date"
+      }
     ]
   },
   {
     "schema": "HumanResources",
     "table": "vEmployeeDepartmentHistory",
     "columns": [
-      "BusinessEntityID",
-      "Title",
-      "FirstName",
-      "MiddleName",
-      "LastName",
-      "Suffix",
-      "Shift",
-      "Department",
-      "GroupName",
-      "StartDate",
-      "EndDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Title",
+        "type": "character varying"
+      },
+      {
+        "name": "FirstName",
+        "type": "character varying"
+      },
+      {
+        "name": "MiddleName",
+        "type": "character varying"
+      },
+      {
+        "name": "LastName",
+        "type": "character varying"
+      },
+      {
+        "name": "Suffix",
+        "type": "character varying"
+      },
+      {
+        "name": "Shift",
+        "type": "character varying"
+      },
+      {
+        "name": "Department",
+        "type": "character varying"
+      },
+      {
+        "name": "GroupName",
+        "type": "character varying"
+      },
+      {
+        "name": "StartDate",
+        "type": "date"
+      },
+      {
+        "name": "EndDate",
+        "type": "date"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "Address",
     "columns": [
-      "AddressID",
-      "AddressLine1",
-      "AddressLine2",
-      "City",
-      "StateProvinceID",
-      "PostalCode",
-      "SpatialLocation",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "AddressID",
+        "type": "integer"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "character varying"
+      },
+      {
+        "name": "City",
+        "type": "character varying"
+      },
+      {
+        "name": "StateProvinceID",
+        "type": "integer"
+      },
+      {
+        "name": "PostalCode",
+        "type": "character varying"
+      },
+      {
+        "name": "SpatialLocation",
+        "type": "text"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "AddressType",
     "columns": [
-      "AddressTypeID",
-      "Name",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "AddressTypeID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "BusinessEntity",
     "columns": [
-      "BusinessEntityID",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "BusinessEntityAddress",
     "columns": [
-      "BusinessEntityID",
-      "AddressID",
-      "AddressTypeID",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "AddressID",
+        "type": "integer"
+      },
+      {
+        "name": "AddressTypeID",
+        "type": "integer"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "BusinessEntityContact",
     "columns": [
-      "BusinessEntityID",
-      "PersonID",
-      "ContactTypeID",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "PersonID",
+        "type": "integer"
+      },
+      {
+        "name": "ContactTypeID",
+        "type": "integer"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "ContactType",
     "columns": [
-      "ContactTypeID",
-      "Name",
-      "ModifiedDate"
+      {
+        "name": "ContactTypeID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "CountryRegion",
     "columns": [
-      "CountryRegionCode",
-      "Name",
-      "ModifiedDate"
+      {
+        "name": "CountryRegionCode",
+        "type": "character varying"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "EmailAddress",
     "columns": [
-      "BusinessEntityID",
-      "EmailAddressID",
-      "EmailAddress",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "EmailAddressID",
+        "type": "integer"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "character varying"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "Password",
     "columns": [
-      "BusinessEntityID",
-      "PasswordHash",
-      "PasswordSalt",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "PasswordHash",
+        "type": "character varying"
+      },
+      {
+        "name": "PasswordSalt",
+        "type": "character varying"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "Person",
     "columns": [
-      "BusinessEntityID",
-      "PersonType",
-      "NameStyle",
-      "Title",
-      "FirstName",
-      "MiddleName",
-      "LastName",
-      "Suffix",
-      "EmailPromotion",
-      "AdditionalContactInfo",
-      "Demographics",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "PersonType",
+        "type": "character"
+      },
+      {
+        "name": "NameStyle",
+        "type": "character varying"
+      },
+      {
+        "name": "Title",
+        "type": "character varying"
+      },
+      {
+        "name": "FirstName",
+        "type": "character varying"
+      },
+      {
+        "name": "MiddleName",
+        "type": "character varying"
+      },
+      {
+        "name": "LastName",
+        "type": "character varying"
+      },
+      {
+        "name": "Suffix",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailPromotion",
+        "type": "integer"
+      },
+      {
+        "name": "AdditionalContactInfo",
+        "type": "xml"
+      },
+      {
+        "name": "Demographics",
+        "type": "xml"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "PersonPhone",
     "columns": [
-      "BusinessEntityID",
-      "PhoneNumber",
-      "PhoneNumberTypeID",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "PhoneNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumberTypeID",
+        "type": "integer"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "PhoneNumberType",
     "columns": [
-      "PhoneNumberTypeID",
-      "Name",
-      "ModifiedDate"
+      {
+        "name": "PhoneNumberTypeID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Person",
     "table": "StateProvince",
     "columns": [
-      "StateProvinceID",
-      "StateProvinceCode",
-      "CountryRegionCode",
-      "IsOnlyStateProvinceFlag",
-      "Name",
-      "TerritoryID",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "StateProvinceID",
+        "type": "integer"
+      },
+      {
+        "name": "StateProvinceCode",
+        "type": "character"
+      },
+      {
+        "name": "CountryRegionCode",
+        "type": "character varying"
+      },
+      {
+        "name": "IsOnlyStateProvinceFlag",
+        "type": "boolean"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "TerritoryID",
+        "type": "integer"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "BillOfMaterials",
     "columns": [
-      "BillOfMaterialsID",
-      "ProductAssemblyID",
-      "ComponentID",
-      "StartDate",
-      "EndDate",
-      "UnitMeasureCode",
-      "BOMLevel",
-      "PerAssemblyQty",
-      "ModifiedDate"
+      {
+        "name": "BillOfMaterialsID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductAssemblyID",
+        "type": "integer"
+      },
+      {
+        "name": "ComponentID",
+        "type": "integer"
+      },
+      {
+        "name": "StartDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "EndDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "UnitMeasureCode",
+        "type": "character"
+      },
+      {
+        "name": "BOMLevel",
+        "type": "smallint"
+      },
+      {
+        "name": "PerAssemblyQty",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "Culture",
     "columns": [
-      "CultureID",
-      "Name",
-      "ModifiedDate"
+      {
+        "name": "CultureID",
+        "type": "character"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "Document",
     "columns": [
-      "DocumentNode",
-      "DocumentLevel",
-      "Title",
-      "Owner",
-      "FolderFlag",
-      "FileName",
-      "FileExtension",
-      "Revision",
-      "ChangeNumber",
-      "Status",
-      "DocumentSummary",
-      "Document",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "DocumentNode",
+        "type": "character varying"
+      },
+      {
+        "name": "DocumentLevel",
+        "type": "integer"
+      },
+      {
+        "name": "Title",
+        "type": "character varying"
+      },
+      {
+        "name": "Owner",
+        "type": "integer"
+      },
+      {
+        "name": "FolderFlag",
+        "type": "boolean"
+      },
+      {
+        "name": "FileName",
+        "type": "character varying"
+      },
+      {
+        "name": "FileExtension",
+        "type": "character varying"
+      },
+      {
+        "name": "Revision",
+        "type": "character"
+      },
+      {
+        "name": "ChangeNumber",
+        "type": "integer"
+      },
+      {
+        "name": "Status",
+        "type": "smallint"
+      },
+      {
+        "name": "DocumentSummary",
+        "type": "text"
+      },
+      {
+        "name": "Document",
+        "type": "bytea"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "Illustration",
     "columns": [
-      "IllustrationID",
-      "Diagram",
-      "ModifiedDate"
+      {
+        "name": "IllustrationID",
+        "type": "integer"
+      },
+      {
+        "name": "Diagram",
+        "type": "xml"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "Location",
     "columns": [
-      "LocationID",
-      "Name",
-      "CostRate",
-      "Availability",
-      "ModifiedDate"
+      {
+        "name": "LocationID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "CostRate",
+        "type": "numeric"
+      },
+      {
+        "name": "Availability",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "Product",
     "columns": [
-      "ProductID",
-      "Name",
-      "ProductNumber",
-      "MakeFlag",
-      "FinishedGoodsFlag",
-      "Color",
-      "SafetyStockLevel",
-      "ReorderPoint",
-      "StandardCost",
-      "ListPrice",
-      "Size",
-      "SizeUnitMeasureCode",
-      "WeightUnitMeasureCode",
-      "Weight",
-      "DaysToManufacture",
-      "ProductLine",
-      "Class",
-      "Style",
-      "ProductSubcategoryID",
-      "ProductModelID",
-      "SellStartDate",
-      "SellEndDate",
-      "DiscontinuedDate",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ProductNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "MakeFlag",
+        "type": "smallint"
+      },
+      {
+        "name": "FinishedGoodsFlag",
+        "type": "smallint"
+      },
+      {
+        "name": "Color",
+        "type": "character varying"
+      },
+      {
+        "name": "SafetyStockLevel",
+        "type": "smallint"
+      },
+      {
+        "name": "ReorderPoint",
+        "type": "smallint"
+      },
+      {
+        "name": "StandardCost",
+        "type": "numeric"
+      },
+      {
+        "name": "ListPrice",
+        "type": "numeric"
+      },
+      {
+        "name": "Size",
+        "type": "character varying"
+      },
+      {
+        "name": "SizeUnitMeasureCode",
+        "type": "character"
+      },
+      {
+        "name": "WeightUnitMeasureCode",
+        "type": "character"
+      },
+      {
+        "name": "Weight",
+        "type": "numeric"
+      },
+      {
+        "name": "DaysToManufacture",
+        "type": "integer"
+      },
+      {
+        "name": "ProductLine",
+        "type": "character"
+      },
+      {
+        "name": "Class",
+        "type": "character"
+      },
+      {
+        "name": "Style",
+        "type": "character"
+      },
+      {
+        "name": "ProductSubcategoryID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductModelID",
+        "type": "integer"
+      },
+      {
+        "name": "SellStartDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "SellEndDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "DiscontinuedDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductCategory",
     "columns": [
-      "ProductCategoryID",
-      "Name",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "ProductCategoryID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductCostHistory",
     "columns": [
-      "ProductID",
-      "StartDate",
-      "EndDate",
-      "StandardCost",
-      "ModifiedDate"
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "StartDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "EndDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "StandardCost",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductDescription",
     "columns": [
-      "ProductDescriptionID",
-      "Description",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "ProductDescriptionID",
+        "type": "integer"
+      },
+      {
+        "name": "Description",
+        "type": "character varying"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductDocument",
     "columns": [
-      "ProductID",
-      "DocumentNode",
-      "ModifiedDate"
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "DocumentNode",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductInventory",
     "columns": [
-      "ProductID",
-      "LocationID",
-      "Shelf",
-      "Bin",
-      "Quantity",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "LocationID",
+        "type": "smallint"
+      },
+      {
+        "name": "Shelf",
+        "type": "character varying"
+      },
+      {
+        "name": "Bin",
+        "type": "smallint"
+      },
+      {
+        "name": "Quantity",
+        "type": "smallint"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductListPriceHistory",
     "columns": [
-      "ProductID",
-      "StartDate",
-      "EndDate",
-      "ListPrice",
-      "ModifiedDate"
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "StartDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "EndDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "ListPrice",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductModel",
     "columns": [
-      "ProductModelID",
-      "Name",
-      "CatalogDescription",
-      "Instructions",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "ProductModelID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "CatalogDescription",
+        "type": "xml"
+      },
+      {
+        "name": "Instructions",
+        "type": "xml"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductModelIllustration",
     "columns": [
-      "ProductModelID",
-      "IllustrationID",
-      "ModifiedDate"
+      {
+        "name": "ProductModelID",
+        "type": "integer"
+      },
+      {
+        "name": "IllustrationID",
+        "type": "integer"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductModelProductDescriptionCulture",
     "columns": [
-      "ProductModelID",
-      "ProductDescriptionID",
-      "CultureID",
-      "ModifiedDate"
+      {
+        "name": "ProductModelID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductDescriptionID",
+        "type": "integer"
+      },
+      {
+        "name": "CultureID",
+        "type": "character"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductPhoto",
     "columns": [
-      "ProductPhotoID",
-      "ThumbNailPhoto",
-      "ThumbnailPhotoFileName",
-      "LargePhoto",
-      "LargePhotoFileName",
-      "ModifiedDate"
+      {
+        "name": "ProductPhotoID",
+        "type": "integer"
+      },
+      {
+        "name": "ThumbNailPhoto",
+        "type": "bytea"
+      },
+      {
+        "name": "ThumbnailPhotoFileName",
+        "type": "character varying"
+      },
+      {
+        "name": "LargePhoto",
+        "type": "bytea"
+      },
+      {
+        "name": "LargePhotoFileName",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductProductPhoto",
     "columns": [
-      "ProductID",
-      "ProductPhotoID",
-      "Primary",
-      "ModifiedDate"
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductPhotoID",
+        "type": "integer"
+      },
+      {
+        "name": "Primary",
+        "type": "boolean"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductReview",
     "columns": [
-      "ProductReviewID",
-      "ProductID",
-      "ReviewerName",
-      "ReviewDate",
-      "EmailAddress",
-      "Rating",
-      "Comments",
-      "ModifiedDate"
+      {
+        "name": "ProductReviewID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "ReviewerName",
+        "type": "character varying"
+      },
+      {
+        "name": "ReviewDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "character varying"
+      },
+      {
+        "name": "Rating",
+        "type": "integer"
+      },
+      {
+        "name": "Comments",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ProductSubcategory",
     "columns": [
-      "ProductSubcategoryID",
-      "ProductCategoryID",
-      "Name",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "ProductSubcategoryID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductCategoryID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "ScrapReason",
     "columns": [
-      "ScrapReasonID",
-      "Name",
-      "ModifiedDate"
+      {
+        "name": "ScrapReasonID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "TransactionHistory",
     "columns": [
-      "TransactionID",
-      "ProductID",
-      "ReferenceOrderID",
-      "ReferenceOrderLineID",
-      "TransactionDate",
-      "TransactionType",
-      "Quantity",
-      "ActualCost",
-      "ModifiedDate"
+      {
+        "name": "TransactionID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "ReferenceOrderID",
+        "type": "integer"
+      },
+      {
+        "name": "ReferenceOrderLineID",
+        "type": "integer"
+      },
+      {
+        "name": "TransactionDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "TransactionType",
+        "type": "character"
+      },
+      {
+        "name": "Quantity",
+        "type": "integer"
+      },
+      {
+        "name": "ActualCost",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "TransactionHistoryArchive",
     "columns": [
-      "TransactionID",
-      "ProductID",
-      "ReferenceOrderID",
-      "ReferenceOrderLineID",
-      "TransactionDate",
-      "TransactionType",
-      "Quantity",
-      "ActualCost",
-      "ModifiedDate"
+      {
+        "name": "TransactionID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "ReferenceOrderID",
+        "type": "integer"
+      },
+      {
+        "name": "ReferenceOrderLineID",
+        "type": "integer"
+      },
+      {
+        "name": "TransactionDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "TransactionType",
+        "type": "character"
+      },
+      {
+        "name": "Quantity",
+        "type": "integer"
+      },
+      {
+        "name": "ActualCost",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "UnitMeasure",
     "columns": [
-      "UnitMeasureCode",
-      "Name",
-      "ModifiedDate"
+      {
+        "name": "UnitMeasureCode",
+        "type": "character"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "WorkOrder",
     "columns": [
-      "WorkOrderID",
-      "ProductID",
-      "OrderQty",
-      "StockedQty",
-      "ScrappedQty",
-      "StartDate",
-      "EndDate",
-      "DueDate",
-      "ScrapReasonID",
-      "ModifiedDate"
+      {
+        "name": "WorkOrderID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "OrderQty",
+        "type": "integer"
+      },
+      {
+        "name": "StockedQty",
+        "type": "integer"
+      },
+      {
+        "name": "ScrappedQty",
+        "type": "smallint"
+      },
+      {
+        "name": "StartDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "EndDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "DueDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "ScrapReasonID",
+        "type": "smallint"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Production",
     "table": "WorkOrderRouting",
     "columns": [
-      "WorkOrderID",
-      "ProductID",
-      "OperationSequence",
-      "LocationID",
-      "ScheduledStartDate",
-      "ScheduledEndDate",
-      "ActualStartDate",
-      "ActualEndDate",
-      "ActualResourceHrs",
-      "PlannedCost",
-      "ActualCost",
-      "ModifiedDate"
+      {
+        "name": "WorkOrderID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "OperationSequence",
+        "type": "smallint"
+      },
+      {
+        "name": "LocationID",
+        "type": "smallint"
+      },
+      {
+        "name": "ScheduledStartDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "ScheduledEndDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "ActualStartDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "ActualEndDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "ActualResourceHrs",
+        "type": "numeric"
+      },
+      {
+        "name": "PlannedCost",
+        "type": "numeric"
+      },
+      {
+        "name": "ActualCost",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Purchasing",
     "table": "ProductVendor",
     "columns": [
-      "ProductID",
-      "BusinessEntityID",
-      "AverageLeadTime",
-      "StandardPrice",
-      "LastReceiptCost",
-      "LastReceiptDate",
-      "MinOrderQty",
-      "MaxOrderQty",
-      "OnOrderQty",
-      "UnitMeasureCode",
-      "ModifiedDate"
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "AverageLeadTime",
+        "type": "integer"
+      },
+      {
+        "name": "StandardPrice",
+        "type": "numeric"
+      },
+      {
+        "name": "LastReceiptCost",
+        "type": "numeric"
+      },
+      {
+        "name": "LastReceiptDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "MinOrderQty",
+        "type": "integer"
+      },
+      {
+        "name": "MaxOrderQty",
+        "type": "integer"
+      },
+      {
+        "name": "OnOrderQty",
+        "type": "integer"
+      },
+      {
+        "name": "UnitMeasureCode",
+        "type": "character"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Purchasing",
     "table": "PurchaseOrderDetail",
     "columns": [
-      "PurchaseOrderID",
-      "PurchaseOrderDetailID",
-      "DueDate",
-      "OrderQty",
-      "ProductID",
-      "UnitPrice",
-      "LineTotal",
-      "ReceivedQty",
-      "RejectedQty",
-      "StockedQty",
-      "ModifiedDate"
+      {
+        "name": "PurchaseOrderID",
+        "type": "integer"
+      },
+      {
+        "name": "PurchaseOrderDetailID",
+        "type": "integer"
+      },
+      {
+        "name": "DueDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "OrderQty",
+        "type": "smallint"
+      },
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "UnitPrice",
+        "type": "numeric"
+      },
+      {
+        "name": "LineTotal",
+        "type": "numeric"
+      },
+      {
+        "name": "ReceivedQty",
+        "type": "numeric"
+      },
+      {
+        "name": "RejectedQty",
+        "type": "numeric"
+      },
+      {
+        "name": "StockedQty",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Purchasing",
     "table": "PurchaseOrderHeader",
     "columns": [
-      "PurchaseOrderID",
-      "RevisionNumber",
-      "Status",
-      "EmployeeID",
-      "VendorID",
-      "ShipMethodID",
-      "OrderDate",
-      "ShipDate",
-      "SubTotal",
-      "TaxAmt",
-      "Freight",
-      "TotalDue",
-      "ModifiedDate"
+      {
+        "name": "PurchaseOrderID",
+        "type": "integer"
+      },
+      {
+        "name": "RevisionNumber",
+        "type": "smallint"
+      },
+      {
+        "name": "Status",
+        "type": "smallint"
+      },
+      {
+        "name": "EmployeeID",
+        "type": "integer"
+      },
+      {
+        "name": "VendorID",
+        "type": "integer"
+      },
+      {
+        "name": "ShipMethodID",
+        "type": "integer"
+      },
+      {
+        "name": "OrderDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "ShipDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "SubTotal",
+        "type": "numeric"
+      },
+      {
+        "name": "TaxAmt",
+        "type": "numeric"
+      },
+      {
+        "name": "Freight",
+        "type": "numeric"
+      },
+      {
+        "name": "TotalDue",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Purchasing",
     "table": "ShipMethod",
     "columns": [
-      "ShipMethodID",
-      "Name",
-      "ShipBase",
-      "ShipRate",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "ShipMethodID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ShipBase",
+        "type": "numeric"
+      },
+      {
+        "name": "ShipRate",
+        "type": "numeric"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Purchasing",
     "table": "Vendor",
     "columns": [
-      "BusinessEntityID",
-      "AccountNumber",
-      "Name",
-      "CreditRating",
-      "PreferredVendorStatus",
-      "ActiveFlag",
-      "PurchasingWebServiceURL",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "AccountNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "CreditRating",
+        "type": "smallint"
+      },
+      {
+        "name": "PreferredVendorStatus",
+        "type": "boolean"
+      },
+      {
+        "name": "ActiveFlag",
+        "type": "boolean"
+      },
+      {
+        "name": "PurchasingWebServiceURL",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Purchasing",
     "table": "vVendorWithAddresses",
     "columns": [
-      "BusinessEntityID",
-      "Name",
-      "AddressType",
-      "AddressLine1",
-      "AddressLine2",
-      "City",
-      "StateProvinceName",
-      "PostalCode",
-      "CountryRegionName"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressType",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "character varying"
+      },
+      {
+        "name": "City",
+        "type": "character varying"
+      },
+      {
+        "name": "StateProvinceName",
+        "type": "character varying"
+      },
+      {
+        "name": "PostalCode",
+        "type": "character varying"
+      },
+      {
+        "name": "CountryRegionName",
+        "type": "character varying"
+      }
     ]
   },
   {
     "schema": "Purchasing",
     "table": "vVendorWithContacts",
     "columns": [
-      "BusinessEntityID",
-      "Name",
-      "ContactType",
-      "Title",
-      "FirstName",
-      "MiddleName",
-      "LastName",
-      "Suffix",
-      "PhoneNumber",
-      "PhoneNumberType",
-      "EmailAddress",
-      "EmailPromotion"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ContactType",
+        "type": "character varying"
+      },
+      {
+        "name": "Title",
+        "type": "character varying"
+      },
+      {
+        "name": "FirstName",
+        "type": "character varying"
+      },
+      {
+        "name": "MiddleName",
+        "type": "character varying"
+      },
+      {
+        "name": "LastName",
+        "type": "character varying"
+      },
+      {
+        "name": "Suffix",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumberType",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailPromotion",
+        "type": "integer"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "CountryRegionCurrency",
     "columns": [
-      "CountryRegionCode",
-      "CurrencyCode",
-      "ModifiedDate"
+      {
+        "name": "CountryRegionCode",
+        "type": "character varying"
+      },
+      {
+        "name": "CurrencyCode",
+        "type": "character"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "CreditCard",
     "columns": [
-      "CreditCardID",
-      "CardType",
-      "CardNumber",
-      "ExpMonth",
-      "ExpYear",
-      "ModifiedDate"
+      {
+        "name": "CreditCardID",
+        "type": "integer"
+      },
+      {
+        "name": "CardType",
+        "type": "character varying"
+      },
+      {
+        "name": "CardNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "ExpMonth",
+        "type": "smallint"
+      },
+      {
+        "name": "ExpYear",
+        "type": "smallint"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "Currency",
     "columns": [
-      "CurrencyCode",
-      "Name",
-      "ModifiedDate"
+      {
+        "name": "CurrencyCode",
+        "type": "character"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "CurrencyRate",
     "columns": [
-      "CurrencyRateID",
-      "CurrencyRateDate",
-      "FromCurrencyCode",
-      "ToCurrencyCode",
-      "AverageRate",
-      "EndOfDayRate",
-      "ModifiedDate"
+      {
+        "name": "CurrencyRateID",
+        "type": "integer"
+      },
+      {
+        "name": "CurrencyRateDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "FromCurrencyCode",
+        "type": "character"
+      },
+      {
+        "name": "ToCurrencyCode",
+        "type": "character"
+      },
+      {
+        "name": "AverageRate",
+        "type": "numeric"
+      },
+      {
+        "name": "EndOfDayRate",
+        "type": "numeric"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "Customer",
     "columns": [
-      "CustomerID",
-      "PersonID",
-      "StoreID",
-      "TerritoryID",
-      "AccountNumber",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "CustomerID",
+        "type": "integer"
+      },
+      {
+        "name": "PersonID",
+        "type": "integer"
+      },
+      {
+        "name": "StoreID",
+        "type": "integer"
+      },
+      {
+        "name": "TerritoryID",
+        "type": "integer"
+      },
+      {
+        "name": "AccountNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "PersonCreditCard",
     "columns": [
-      "BusinessEntityID",
-      "CreditCardID",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "CreditCardID",
+        "type": "integer"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SalesOrderDetail",
     "columns": [
-      "SalesOrderID",
-      "SalesOrderDetailID",
-      "CarrierTrackingNumber",
-      "OrderQty",
-      "ProductID",
-      "SpecialOfferID",
-      "UnitPrice",
-      "UnitPriceDiscount",
-      "LineTotal",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "SalesOrderID",
+        "type": "integer"
+      },
+      {
+        "name": "SalesOrderDetailID",
+        "type": "integer"
+      },
+      {
+        "name": "CarrierTrackingNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "OrderQty",
+        "type": "smallint"
+      },
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "SpecialOfferID",
+        "type": "integer"
+      },
+      {
+        "name": "UnitPrice",
+        "type": "numeric"
+      },
+      {
+        "name": "UnitPriceDiscount",
+        "type": "numeric"
+      },
+      {
+        "name": "LineTotal",
+        "type": "numeric"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SalesOrderHeader",
     "columns": [
-      "SalesOrderID",
-      "RevisionNumber",
-      "OrderDate",
-      "DueDate",
-      "ShipDate",
-      "Status",
-      "OnlineOrderFlag",
-      "SalesOrderNumber",
-      "PurchaseOrderNumber",
-      "AccountNumber",
-      "CustomerID",
-      "SalesPersonID",
-      "TerritoryID",
-      "BillToAddressID",
-      "ShipToAddressID",
-      "ShipMethodID",
-      "CreditCardID",
-      "CreditCardApprovalCode",
-      "CurrencyRateID",
-      "SubTotal",
-      "TaxAmt",
-      "Freight",
-      "TotalDue",
-      "Comment",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "SalesOrderID",
+        "type": "integer"
+      },
+      {
+        "name": "RevisionNumber",
+        "type": "smallint"
+      },
+      {
+        "name": "OrderDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "DueDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "ShipDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "Status",
+        "type": "smallint"
+      },
+      {
+        "name": "OnlineOrderFlag",
+        "type": "boolean"
+      },
+      {
+        "name": "SalesOrderNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "PurchaseOrderNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "AccountNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "CustomerID",
+        "type": "integer"
+      },
+      {
+        "name": "SalesPersonID",
+        "type": "integer"
+      },
+      {
+        "name": "TerritoryID",
+        "type": "integer"
+      },
+      {
+        "name": "BillToAddressID",
+        "type": "integer"
+      },
+      {
+        "name": "ShipToAddressID",
+        "type": "integer"
+      },
+      {
+        "name": "ShipMethodID",
+        "type": "integer"
+      },
+      {
+        "name": "CreditCardID",
+        "type": "integer"
+      },
+      {
+        "name": "CreditCardApprovalCode",
+        "type": "character varying"
+      },
+      {
+        "name": "CurrencyRateID",
+        "type": "integer"
+      },
+      {
+        "name": "SubTotal",
+        "type": "numeric"
+      },
+      {
+        "name": "TaxAmt",
+        "type": "numeric"
+      },
+      {
+        "name": "Freight",
+        "type": "numeric"
+      },
+      {
+        "name": "TotalDue",
+        "type": "numeric"
+      },
+      {
+        "name": "Comment",
+        "type": "character varying"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SalesOrderHeaderSalesReason",
     "columns": [
-      "SalesOrderID",
-      "SalesReasonID",
-      "ModifiedDate"
+      {
+        "name": "SalesOrderID",
+        "type": "integer"
+      },
+      {
+        "name": "SalesReasonID",
+        "type": "integer"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SalesPerson",
     "columns": [
-      "BusinessEntityID",
-      "TerritoryID",
-      "SalesQuota",
-      "Bonus",
-      "CommissionPct",
-      "SalesYTD",
-      "SalesLastYear",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "TerritoryID",
+        "type": "integer"
+      },
+      {
+        "name": "SalesQuota",
+        "type": "numeric"
+      },
+      {
+        "name": "Bonus",
+        "type": "numeric"
+      },
+      {
+        "name": "CommissionPct",
+        "type": "numeric"
+      },
+      {
+        "name": "SalesYTD",
+        "type": "numeric"
+      },
+      {
+        "name": "SalesLastYear",
+        "type": "numeric"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SalesPersonQuotaHistory",
     "columns": [
-      "BusinessEntityID",
-      "QuotaDate",
-      "SalesQuota",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "QuotaDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "SalesQuota",
+        "type": "numeric"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SalesReason",
     "columns": [
-      "SalesReasonID",
-      "Name",
-      "ReasonType",
-      "ModifiedDate"
+      {
+        "name": "SalesReasonID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ReasonType",
+        "type": "character varying"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SalesTaxRate",
     "columns": [
-      "SalesTaxRateID",
-      "StateProvinceID",
-      "TaxType",
-      "TaxRate",
-      "Name",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "SalesTaxRateID",
+        "type": "integer"
+      },
+      {
+        "name": "StateProvinceID",
+        "type": "integer"
+      },
+      {
+        "name": "TaxType",
+        "type": "smallint"
+      },
+      {
+        "name": "TaxRate",
+        "type": "numeric"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SalesTerritory",
     "columns": [
-      "TerritoryID",
-      "Name",
-      "CountryRegionCode",
-      "Group",
-      "SalesYTD",
-      "SalesLastYear",
-      "CostYTD",
-      "CostLastYear",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "TerritoryID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "CountryRegionCode",
+        "type": "character varying"
+      },
+      {
+        "name": "Group",
+        "type": "character varying"
+      },
+      {
+        "name": "SalesYTD",
+        "type": "numeric"
+      },
+      {
+        "name": "SalesLastYear",
+        "type": "numeric"
+      },
+      {
+        "name": "CostYTD",
+        "type": "numeric"
+      },
+      {
+        "name": "CostLastYear",
+        "type": "numeric"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SalesTerritoryHistory",
     "columns": [
-      "BusinessEntityID",
-      "TerritoryID",
-      "StartDate",
-      "EndDate",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "TerritoryID",
+        "type": "integer"
+      },
+      {
+        "name": "StartDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "EndDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "ShoppingCartItem",
     "columns": [
-      "ShoppingCartItemID",
-      "ShoppingCartID",
-      "Quantity",
-      "ProductID",
-      "DateCreated",
-      "ModifiedDate"
+      {
+        "name": "ShoppingCartItemID",
+        "type": "integer"
+      },
+      {
+        "name": "ShoppingCartID",
+        "type": "character varying"
+      },
+      {
+        "name": "Quantity",
+        "type": "integer"
+      },
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "DateCreated",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SpecialOffer",
     "columns": [
-      "SpecialOfferID",
-      "Description",
-      "DiscountPct",
-      "Type",
-      "Category",
-      "StartDate",
-      "EndDate",
-      "MinQty",
-      "MaxQty",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "SpecialOfferID",
+        "type": "integer"
+      },
+      {
+        "name": "Description",
+        "type": "character varying"
+      },
+      {
+        "name": "DiscountPct",
+        "type": "numeric"
+      },
+      {
+        "name": "Type",
+        "type": "character varying"
+      },
+      {
+        "name": "Category",
+        "type": "character varying"
+      },
+      {
+        "name": "StartDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "EndDate",
+        "type": "timestamp without time zone"
+      },
+      {
+        "name": "MinQty",
+        "type": "integer"
+      },
+      {
+        "name": "MaxQty",
+        "type": "integer"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "SpecialOfferProduct",
     "columns": [
-      "SpecialOfferID",
-      "ProductID",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "SpecialOfferID",
+        "type": "integer"
+      },
+      {
+        "name": "ProductID",
+        "type": "integer"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "Store",
     "columns": [
-      "BusinessEntityID",
-      "Name",
-      "SalesPersonID",
-      "Demographics",
-      "rowguid",
-      "ModifiedDate"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "SalesPersonID",
+        "type": "integer"
+      },
+      {
+        "name": "Demographics",
+        "type": "xml"
+      },
+      {
+        "name": "rowguid",
+        "type": "uuid"
+      },
+      {
+        "name": "ModifiedDate",
+        "type": "timestamp without time zone"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "vIndividualCustomer",
     "columns": [
-      "BusinessEntityID",
-      "Title",
-      "FirstName",
-      "MiddleName",
-      "LastName",
-      "Suffix",
-      "PhoneNumber",
-      "PhoneNumberType",
-      "EmailAddress",
-      "EmailPromotion",
-      "AddressType",
-      "AddressLine1",
-      "AddressLine2",
-      "City",
-      "StateProvinceName",
-      "PostalCode",
-      "CountryRegionName",
-      "Demographics"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Title",
+        "type": "character varying"
+      },
+      {
+        "name": "FirstName",
+        "type": "character varying"
+      },
+      {
+        "name": "MiddleName",
+        "type": "character varying"
+      },
+      {
+        "name": "LastName",
+        "type": "character varying"
+      },
+      {
+        "name": "Suffix",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumberType",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailPromotion",
+        "type": "integer"
+      },
+      {
+        "name": "AddressType",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "character varying"
+      },
+      {
+        "name": "City",
+        "type": "character varying"
+      },
+      {
+        "name": "StateProvinceName",
+        "type": "character varying"
+      },
+      {
+        "name": "PostalCode",
+        "type": "character varying"
+      },
+      {
+        "name": "CountryRegionName",
+        "type": "character varying"
+      },
+      {
+        "name": "Demographics",
+        "type": "xml"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "vSalesPerson",
     "columns": [
-      "BusinessEntityID",
-      "Title",
-      "FirstName",
-      "MiddleName",
-      "LastName",
-      "Suffix",
-      "JobTitle",
-      "PhoneNumber",
-      "PhoneNumberType",
-      "EmailAddress",
-      "EmailPromotion",
-      "AddressLine1",
-      "AddressLine2",
-      "City",
-      "StateProvinceName",
-      "PostalCode",
-      "CountryRegionName",
-      "TerritoryName",
-      "TerritoryGroup",
-      "SalesQuota",
-      "SalesYTD",
-      "SalesLastYear"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Title",
+        "type": "character varying"
+      },
+      {
+        "name": "FirstName",
+        "type": "character varying"
+      },
+      {
+        "name": "MiddleName",
+        "type": "character varying"
+      },
+      {
+        "name": "LastName",
+        "type": "character varying"
+      },
+      {
+        "name": "Suffix",
+        "type": "character varying"
+      },
+      {
+        "name": "JobTitle",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumberType",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailPromotion",
+        "type": "integer"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "character varying"
+      },
+      {
+        "name": "City",
+        "type": "character varying"
+      },
+      {
+        "name": "StateProvinceName",
+        "type": "character varying"
+      },
+      {
+        "name": "PostalCode",
+        "type": "character varying"
+      },
+      {
+        "name": "CountryRegionName",
+        "type": "character varying"
+      },
+      {
+        "name": "TerritoryName",
+        "type": "character varying"
+      },
+      {
+        "name": "TerritoryGroup",
+        "type": "character varying"
+      },
+      {
+        "name": "SalesQuota",
+        "type": "numeric"
+      },
+      {
+        "name": "SalesYTD",
+        "type": "numeric"
+      },
+      {
+        "name": "SalesLastYear",
+        "type": "numeric"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "vStoreWithAddresses",
     "columns": [
-      "BusinessEntityID",
-      "Name",
-      "AddressType",
-      "AddressLine1",
-      "AddressLine2",
-      "City",
-      "StateProvinceName",
-      "PostalCode",
-      "CountryRegionName"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressType",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "character varying"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "character varying"
+      },
+      {
+        "name": "City",
+        "type": "character varying"
+      },
+      {
+        "name": "StateProvinceName",
+        "type": "character varying"
+      },
+      {
+        "name": "PostalCode",
+        "type": "character varying"
+      },
+      {
+        "name": "CountryRegionName",
+        "type": "character varying"
+      }
     ]
   },
   {
     "schema": "Sales",
     "table": "vStoreWithContacts",
     "columns": [
-      "BusinessEntityID",
-      "Name",
-      "ContactType",
-      "Title",
-      "FirstName",
-      "MiddleName",
-      "LastName",
-      "Suffix",
-      "PhoneNumber",
-      "PhoneNumberType",
-      "EmailAddress",
-      "EmailPromotion"
+      {
+        "name": "BusinessEntityID",
+        "type": "integer"
+      },
+      {
+        "name": "Name",
+        "type": "character varying"
+      },
+      {
+        "name": "ContactType",
+        "type": "character varying"
+      },
+      {
+        "name": "Title",
+        "type": "character varying"
+      },
+      {
+        "name": "FirstName",
+        "type": "character varying"
+      },
+      {
+        "name": "MiddleName",
+        "type": "character varying"
+      },
+      {
+        "name": "LastName",
+        "type": "character varying"
+      },
+      {
+        "name": "Suffix",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumber",
+        "type": "character varying"
+      },
+      {
+        "name": "PhoneNumberType",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailAddress",
+        "type": "character varying"
+      },
+      {
+        "name": "EmailPromotion",
+        "type": "integer"
+      }
     ]
   }
 ]

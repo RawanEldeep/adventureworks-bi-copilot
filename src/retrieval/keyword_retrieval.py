@@ -6,7 +6,8 @@ from retrieval.preprocessing import TextProcessing
 def build_document(entry: dict) -> str:
     """Flatten one schema catalog entry (schema, table, columns) into a
     single text string - the "document" BM25 will index for that table."""
-    return " ".join([entry["schema"], entry["table"]] + entry["columns"])
+    column_names = [col["name"] for col in entry["columns"]]
+    return " ".join([entry["schema"], entry["table"]] + column_names)
 
 
 class KeywordRetriever:
