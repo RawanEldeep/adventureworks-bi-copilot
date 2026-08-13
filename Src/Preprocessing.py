@@ -8,16 +8,16 @@ from nltk.tag import pos_tag
 from nltk.corpus import wordnet
 from nltk.tokenize import word_tokenize
 
-for _resource, _path in [
+for _Resource, _Path in [
     ("stopwords", "corpora/stopwords"),
     ("wordnet", "corpora/wordnet"),
     ("averaged_perceptron_tagger", "taggers/averaged_perceptron_tagger"),
     ("punkt", "tokenizers/punkt"),
 ]:
     try:
-        nltk.data.find(_path)
+        nltk.data.find(_Path)
     except LookupError:
-        nltk.download(_resource)
+        nltk.download(_Resource)
 
 
 Stop = set(stopwords.words("english"))
@@ -27,64 +27,64 @@ Stop.discard("never")
 
 Lemma = WordNetLemmatizer()
 
-Re_Camel = re.compile(r"([a-z0-9])([A-Z])")
-Re_NonAlph = re.compile(r"[^a-zA-Z0-9\s]")
-Re_Space = re.compile(r"\s+")
+ReCamel = re.compile(r"([a-z0-9])([A-Z])")
+ReNonAlph = re.compile(r"[^a-zA-Z0-9\s]")
+ReSpace = re.compile(r"\s+")
 
 
 
 
-def SplitCamelCase(word: str) -> list[str]:
+def SplitCamelCase(Word: str) -> list[str]:
     """"SalesOrderDetail" -> ["Sales", "Order", "Detail"]; no-ops on plain lowercase words."""
-    return Re_Camel.sub(r"\1 \2", word).split()
+    return ReCamel.sub(r"\1 \2", Word).split()
 
 
-def WordNetPos(tag):
-    if tag.startswith("J"):
+def WordNetPos(Tag):
+    if Tag.startswith("J"):
         return wordnet.ADJ
-    if tag.startswith("V"):
+    if Tag.startswith("V"):
         return wordnet.VERB
-    if tag.startswith("R"):
+    if Tag.startswith("R"):
         return wordnet.ADV
     return wordnet.NOUN
 
 
-def SafeLemmatization(w: str, pos_tag_: str) -> str:
-    if pos_tag_ == "NNP" or w.endswith("ss"):
-        return w
-    return Lemma.lemmatize(w, WordNetPos(pos_tag_))
+def SafeLemmatization(W: str, PosTag: str) -> str:
+    if PosTag == "NNP" or W.endswith("ss"):
+        return W
+    return Lemma.lemmatize(W, WordNetPos(PosTag))
 
 
 def CleanText(T: str) -> str:
-    T = Re_Camel.sub(r"\1 \2", T)
+    T = ReCamel.sub(r"\1 \2", T)
     T = T.lower()
-    T = Re_NonAlph.sub("", T)
-    T = Re_Space.sub(" ", T).strip()
+    T = ReNonAlph.sub("", T)
+    T = ReSpace.sub(" ", T).strip()
     return T
 
 
 def TextProcessing(T: str) -> list[str]:
     T = str(T)
     T = CleanText(T)
-    tokens = word_tokenize(T)
+    Tokens = word_tokenize(T)
 
-    tokens = [
-        w for w in tokens
-        if len(w) > 1 and w not in Stop and not w.isnumeric()
+    Tokens = [
+        W for W in Tokens
+        if len(W) > 1 and W not in Stop and not W.isnumeric()
     ]
 
-    tagged = pos_tag(tokens)
-    return [SafeLemmatization(w, tag) for w, tag in tagged]
+    Tagged = pos_tag(Tokens)
+    return [SafeLemmatization(W, Tag) for W, Tag in Tagged]
 
 """
 if __name__ == "__main__":
-    tests = [
+    Tests = [
         "How many customers do we have?",
         "SalesOrderDetail",
         "What is the average product list price?",
         "Show me sales by territory",
     ]
-    for t in tests:
-        print(f"{t!r} -> {TextProcessing(t)}")
+    for T in Tests:
+        print(f"{T!r} -> {TextProcessing(T)}")
 """
 

@@ -1,0 +1,632 @@
+[
+  {
+    "concept": "Revenue",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesOrderDetail",
+        "column": "LineTotal"
+      }
+    ],
+    "related_concepts": [
+      "Order Value",
+      "Sales Subtotal",
+      "Profit",
+      "Profit Margin"
+    ]
+  },
+  {
+    "concept": "Order Value",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesOrderHeader",
+        "column": "TotalDue"
+      }
+    ],
+    "related_concepts": [
+      "Revenue",
+      "Sales Subtotal",
+      "Sales Tax",
+      "Freight Cost"
+    ]
+  },
+  {
+    "concept": "Sales Subtotal",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesOrderHeader",
+        "column": "SubTotal"
+      }
+    ],
+    "related_concepts": [
+      "Order Value",
+      "Revenue",
+      "Sales Tax"
+    ]
+  },
+  {
+    "concept": "Sales Tax",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesOrderHeader",
+        "column": "TaxAmt"
+      }
+    ],
+    "related_concepts": [
+      "Order Value",
+      "Freight Cost",
+      "Sales Tax Rate"
+    ]
+  },
+  {
+    "concept": "Freight Cost",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesOrderHeader",
+        "column": "Freight"
+      }
+    ],
+    "related_concepts": [
+      "Order Value",
+      "Sales Tax"
+    ]
+  },
+  {
+    "concept": "Unit Price",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesOrderDetail",
+        "column": "UnitPrice"
+      }
+    ],
+    "related_concepts": [
+      "Discount Rate",
+      "List Price"
+    ]
+  },
+  {
+    "concept": "Discount Rate",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesOrderDetail",
+        "column": "UnitPriceDiscount"
+      }
+    ],
+    "related_concepts": [
+      "Unit Price",
+      "Promotional Discount"
+    ]
+  },
+  {
+    "concept": "Promotional Discount",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SpecialOffer",
+        "column": "DiscountPct"
+      }
+    ],
+    "related_concepts": [
+      "Discount Rate"
+    ]
+  },
+  {
+    "concept": "List Price",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "Product",
+        "column": "ListPrice"
+      }
+    ],
+    "related_concepts": [
+      "Standard Cost",
+      "Unit Price",
+      "Profit"
+    ]
+  },
+  {
+    "concept": "Standard Cost",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "Product",
+        "column": "StandardCost"
+      }
+    ],
+    "related_concepts": [
+      "List Price",
+      "Profit",
+      "Profit Margin"
+    ]
+  },
+  {
+    "concept": "Profit",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesOrderDetail",
+        "column": "LineTotal"
+      },
+      {
+        "schema": "Production",
+        "table": "Product",
+        "column": "StandardCost"
+      }
+    ],
+    "related_concepts": [
+      "Revenue",
+      "Profit Margin",
+      "Standard Cost"
+    ]
+  },
+  {
+    "concept": "Profit Margin",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesOrderDetail",
+        "column": "LineTotal"
+      },
+      {
+        "schema": "Production",
+        "table": "Product",
+        "column": "StandardCost"
+      }
+    ],
+    "related_concepts": [
+      "Profit",
+      "Revenue"
+    ]
+  },
+  {
+    "concept": "Sales Target",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesPerson",
+        "column": "SalesQuota"
+      }
+    ],
+    "related_concepts": [
+      "Year-to-Date Sales",
+      "Sales Commission"
+    ]
+  },
+  {
+    "concept": "Year-to-Date Sales",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesPerson",
+        "column": "SalesYTD"
+      }
+    ],
+    "related_concepts": [
+      "Sales Target",
+      "Prior Year Sales"
+    ]
+  },
+  {
+    "concept": "Prior Year Sales",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesPerson",
+        "column": "SalesLastYear"
+      }
+    ],
+    "related_concepts": [
+      "Year-to-Date Sales"
+    ]
+  },
+  {
+    "concept": "Sales Commission",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesPerson",
+        "column": "CommissionPct"
+      }
+    ],
+    "related_concepts": [
+      "Sales Target",
+      "Bonus Pay"
+    ]
+  },
+  {
+    "concept": "Bonus Pay",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesPerson",
+        "column": "Bonus"
+      }
+    ],
+    "related_concepts": [
+      "Sales Commission",
+      "Employee Pay Rate"
+    ]
+  },
+  {
+    "concept": "Employee Pay Rate",
+    "anchors": [
+      {
+        "schema": "HumanResources",
+        "table": "EmployeePayHistory",
+        "column": "Rate"
+      }
+    ],
+    "related_concepts": [
+      "Bonus Pay",
+      "Vacation Balance"
+    ]
+  },
+  {
+    "concept": "Vacation Balance",
+    "anchors": [
+      {
+        "schema": "HumanResources",
+        "table": "Employee",
+        "column": "VacationHours"
+      }
+    ],
+    "related_concepts": [
+      "Sick Leave Balance"
+    ]
+  },
+  {
+    "concept": "Sick Leave Balance",
+    "anchors": [
+      {
+        "schema": "HumanResources",
+        "table": "Employee",
+        "column": "SickLeaveHours"
+      }
+    ],
+    "related_concepts": [
+      "Vacation Balance"
+    ]
+  },
+  {
+    "concept": "Stock Quantity",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "ProductInventory",
+        "column": "Quantity"
+      }
+    ],
+    "related_concepts": [
+      "Safety Stock Level",
+      "Reorder Point"
+    ]
+  },
+  {
+    "concept": "Safety Stock Level",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "Product",
+        "column": "SafetyStockLevel"
+      }
+    ],
+    "related_concepts": [
+      "Stock Quantity",
+      "Reorder Point"
+    ]
+  },
+  {
+    "concept": "Reorder Point",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "Product",
+        "column": "ReorderPoint"
+      }
+    ],
+    "related_concepts": [
+      "Stock Quantity",
+      "Safety Stock Level"
+    ]
+  },
+  {
+    "concept": "Total Purchase Spend",
+    "anchors": [
+      {
+        "schema": "Purchasing",
+        "table": "PurchaseOrderHeader",
+        "column": "TotalDue"
+      }
+    ],
+    "related_concepts": [
+      "Purchase Order Line Total",
+      "Vendor Unit Price"
+    ]
+  },
+  {
+    "concept": "Purchase Order Line Total",
+    "anchors": [
+      {
+        "schema": "Purchasing",
+        "table": "PurchaseOrderDetail",
+        "column": "LineTotal"
+      }
+    ],
+    "related_concepts": [
+      "Total Purchase Spend",
+      "Vendor Unit Price"
+    ]
+  },
+  {
+    "concept": "Vendor Unit Price",
+    "anchors": [
+      {
+        "schema": "Purchasing",
+        "table": "PurchaseOrderDetail",
+        "column": "UnitPrice"
+      }
+    ],
+    "related_concepts": [
+      "Vendor Negotiated Price",
+      "Purchase Order Line Total"
+    ]
+  },
+  {
+    "concept": "Vendor Negotiated Price",
+    "anchors": [
+      {
+        "schema": "Purchasing",
+        "table": "ProductVendor",
+        "column": "StandardPrice"
+      }
+    ],
+    "related_concepts": [
+      "Vendor Unit Price",
+      "Vendor Lead Time"
+    ]
+  },
+  {
+    "concept": "Vendor Lead Time",
+    "anchors": [
+      {
+        "schema": "Purchasing",
+        "table": "ProductVendor",
+        "column": "AverageLeadTime"
+      }
+    ],
+    "related_concepts": [
+      "Vendor Negotiated Price"
+    ]
+  },
+  {
+    "concept": "Vendor Credit Rating",
+    "anchors": [
+      {
+        "schema": "Purchasing",
+        "table": "Vendor",
+        "column": "CreditRating"
+      }
+    ],
+    "related_concepts": [
+      "Total Purchase Spend"
+    ]
+  },
+  {
+    "concept": "Purchase Order Quantity",
+    "anchors": [
+      {
+        "schema": "Purchasing",
+        "table": "PurchaseOrderDetail",
+        "column": "OrderQty"
+      }
+    ],
+    "related_concepts": [
+      "Received Quantity",
+      "Rejected Quantity"
+    ]
+  },
+  {
+    "concept": "Received Quantity",
+    "anchors": [
+      {
+        "schema": "Purchasing",
+        "table": "PurchaseOrderDetail",
+        "column": "ReceivedQty"
+      }
+    ],
+    "related_concepts": [
+      "Purchase Order Quantity",
+      "Rejected Quantity"
+    ]
+  },
+  {
+    "concept": "Rejected Quantity",
+    "anchors": [
+      {
+        "schema": "Purchasing",
+        "table": "PurchaseOrderDetail",
+        "column": "RejectedQty"
+      }
+    ],
+    "related_concepts": [
+      "Purchase Order Quantity",
+      "Received Quantity"
+    ]
+  },
+  {
+    "concept": "Production Order Quantity",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "WorkOrder",
+        "column": "OrderQty"
+      }
+    ],
+    "related_concepts": [
+      "Scrapped Quantity",
+      "Scrap Rate"
+    ]
+  },
+  {
+    "concept": "Scrapped Quantity",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "WorkOrder",
+        "column": "ScrappedQty"
+      }
+    ],
+    "related_concepts": [
+      "Production Order Quantity",
+      "Scrap Rate"
+    ]
+  },
+  {
+    "concept": "Scrap Rate",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "WorkOrder",
+        "column": "ScrappedQty"
+      },
+      {
+        "schema": "Production",
+        "table": "WorkOrder",
+        "column": "OrderQty"
+      }
+    ],
+    "related_concepts": [
+      "Scrapped Quantity",
+      "Production Order Quantity"
+    ]
+  },
+  {
+    "concept": "Work Order Actual Cost",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "WorkOrderRouting",
+        "column": "ActualCost"
+      }
+    ],
+    "related_concepts": [
+      "Work Order Planned Cost",
+      "Cost Variance"
+    ]
+  },
+  {
+    "concept": "Work Order Planned Cost",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "WorkOrderRouting",
+        "column": "PlannedCost"
+      }
+    ],
+    "related_concepts": [
+      "Work Order Actual Cost",
+      "Cost Variance"
+    ]
+  },
+  {
+    "concept": "Cost Variance",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "WorkOrderRouting",
+        "column": "ActualCost"
+      },
+      {
+        "schema": "Production",
+        "table": "WorkOrderRouting",
+        "column": "PlannedCost"
+      }
+    ],
+    "related_concepts": [
+      "Work Order Actual Cost",
+      "Work Order Planned Cost"
+    ]
+  },
+  {
+    "concept": "Labor Hours Spent",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "WorkOrderRouting",
+        "column": "ActualResourceHrs"
+      }
+    ],
+    "related_concepts": [
+      "Work Order Actual Cost"
+    ]
+  },
+  {
+    "concept": "Territory Sales YTD",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesTerritory",
+        "column": "SalesYTD"
+      }
+    ],
+    "related_concepts": [
+      "Territory Cost YTD",
+      "Year-to-Date Sales"
+    ]
+  },
+  {
+    "concept": "Territory Cost YTD",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesTerritory",
+        "column": "CostYTD"
+      }
+    ],
+    "related_concepts": [
+      "Territory Sales YTD"
+    ]
+  },
+  {
+    "concept": "Product Rating",
+    "anchors": [
+      {
+        "schema": "Production",
+        "table": "ProductReview",
+        "column": "Rating"
+      }
+    ],
+    "related_concepts": []
+  },
+  {
+    "concept": "Exchange Rate",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "CurrencyRate",
+        "column": "AverageRate"
+      }
+    ],
+    "related_concepts": []
+  },
+  {
+    "concept": "Sales Tax Rate",
+    "anchors": [
+      {
+        "schema": "Sales",
+        "table": "SalesTaxRate",
+        "column": "TaxRate"
+      }
+    ],
+    "related_concepts": [
+      "Sales Tax"
+    ]
+  }
+]

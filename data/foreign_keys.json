@@ -1,6 +1,14 @@
 [
   {
     "source_schema": "HumanResources",
+    "source_table": "Employee",
+    "source_column": "BusinessEntityID",
+    "target_schema": "Person",
+    "target_table": "Person",
+    "target_column": "BusinessEntityID"
+  },
+  {
+    "source_schema": "HumanResources",
     "source_table": "EmployeeDepartmentHistory",
     "source_column": "DepartmentID",
     "target_schema": "HumanResources",
@@ -10,18 +18,18 @@
   {
     "source_schema": "HumanResources",
     "source_table": "EmployeeDepartmentHistory",
-    "source_column": "BusinessEntityID",
-    "target_schema": "HumanResources",
-    "target_table": "Employee",
-    "target_column": "BusinessEntityID"
-  },
-  {
-    "source_schema": "HumanResources",
-    "source_table": "EmployeeDepartmentHistory",
     "source_column": "ShiftID",
     "target_schema": "HumanResources",
     "target_table": "Shift",
     "target_column": "ShiftID"
+  },
+  {
+    "source_schema": "HumanResources",
+    "source_table": "EmployeeDepartmentHistory",
+    "source_column": "BusinessEntityID",
+    "target_schema": "HumanResources",
+    "target_table": "Employee",
+    "target_column": "BusinessEntityID"
   },
   {
     "source_schema": "HumanResources",
@@ -50,14 +58,6 @@
   {
     "source_schema": "Person",
     "source_table": "BusinessEntityAddress",
-    "source_column": "AddressID",
-    "target_schema": "Person",
-    "target_table": "Address",
-    "target_column": "AddressID"
-  },
-  {
-    "source_schema": "Person",
-    "source_table": "BusinessEntityAddress",
     "source_column": "AddressTypeID",
     "target_schema": "Person",
     "target_table": "AddressType",
@@ -70,6 +70,14 @@
     "target_schema": "Person",
     "target_table": "BusinessEntity",
     "target_column": "BusinessEntityID"
+  },
+  {
+    "source_schema": "Person",
+    "source_table": "BusinessEntityAddress",
+    "source_column": "AddressID",
+    "target_schema": "Person",
+    "target_table": "Address",
+    "target_column": "AddressID"
   },
   {
     "source_schema": "Person",
@@ -144,6 +152,14 @@
     "target_column": "CountryRegionCode"
   },
   {
+    "source_schema": "Person",
+    "source_table": "StateProvince",
+    "source_column": "TerritoryID",
+    "target_schema": "Sales",
+    "target_table": "SalesTerritory",
+    "target_column": "TerritoryID"
+  },
+  {
     "source_schema": "Production",
     "source_table": "BillOfMaterials",
     "source_column": "ComponentID",
@@ -169,19 +185,19 @@
   },
   {
     "source_schema": "Production",
+    "source_table": "Document",
+    "source_column": "Owner",
+    "target_schema": "HumanResources",
+    "target_table": "Employee",
+    "target_column": "BusinessEntityID"
+  },
+  {
+    "source_schema": "Production",
     "source_table": "Product",
     "source_column": "ProductModelID",
     "target_schema": "Production",
     "target_table": "ProductModel",
     "target_column": "ProductModelID"
-  },
-  {
-    "source_schema": "Production",
-    "source_table": "Product",
-    "source_column": "ProductSubcategoryID",
-    "target_schema": "Production",
-    "target_table": "ProductSubcategory",
-    "target_column": "ProductSubcategoryID"
   },
   {
     "source_schema": "Production",
@@ -198,6 +214,14 @@
     "target_schema": "Production",
     "target_table": "UnitMeasure",
     "target_column": "UnitMeasureCode"
+  },
+  {
+    "source_schema": "Production",
+    "source_table": "Product",
+    "source_column": "ProductSubcategoryID",
+    "target_schema": "Production",
+    "target_table": "ProductSubcategory",
+    "target_column": "ProductSubcategoryID"
   },
   {
     "source_schema": "Production",
@@ -226,18 +250,18 @@
   {
     "source_schema": "Production",
     "source_table": "ProductInventory",
-    "source_column": "LocationID",
-    "target_schema": "Production",
-    "target_table": "Location",
-    "target_column": "LocationID"
-  },
-  {
-    "source_schema": "Production",
-    "source_table": "ProductInventory",
     "source_column": "ProductID",
     "target_schema": "Production",
     "target_table": "Product",
     "target_column": "ProductID"
+  },
+  {
+    "source_schema": "Production",
+    "source_table": "ProductInventory",
+    "source_column": "LocationID",
+    "target_schema": "Production",
+    "target_table": "Location",
+    "target_column": "LocationID"
   },
   {
     "source_schema": "Production",
@@ -266,6 +290,14 @@
   {
     "source_schema": "Production",
     "source_table": "ProductModelProductDescriptionCulture",
+    "source_column": "ProductModelID",
+    "target_schema": "Production",
+    "target_table": "ProductModel",
+    "target_column": "ProductModelID"
+  },
+  {
+    "source_schema": "Production",
+    "source_table": "ProductModelProductDescriptionCulture",
     "source_column": "CultureID",
     "target_schema": "Production",
     "target_table": "Culture",
@@ -278,14 +310,6 @@
     "target_schema": "Production",
     "target_table": "ProductDescription",
     "target_column": "ProductDescriptionID"
-  },
-  {
-    "source_schema": "Production",
-    "source_table": "ProductModelProductDescriptionCulture",
-    "source_column": "ProductModelID",
-    "target_schema": "Production",
-    "target_table": "ProductModel",
-    "target_column": "ProductModelID"
   },
   {
     "source_schema": "Production",
@@ -330,6 +354,14 @@
   {
     "source_schema": "Production",
     "source_table": "WorkOrder",
+    "source_column": "ScrapReasonID",
+    "target_schema": "Production",
+    "target_table": "ScrapReason",
+    "target_column": "ScrapReasonID"
+  },
+  {
+    "source_schema": "Production",
+    "source_table": "WorkOrder",
     "source_column": "ProductID",
     "target_schema": "Production",
     "target_table": "Product",
@@ -337,11 +369,11 @@
   },
   {
     "source_schema": "Production",
-    "source_table": "WorkOrder",
-    "source_column": "ScrapReasonID",
+    "source_table": "WorkOrderRouting",
+    "source_column": "WorkOrderID",
     "target_schema": "Production",
-    "target_table": "ScrapReason",
-    "target_column": "ScrapReasonID"
+    "target_table": "WorkOrder",
+    "target_column": "WorkOrderID"
   },
   {
     "source_schema": "Production",
@@ -352,12 +384,20 @@
     "target_column": "LocationID"
   },
   {
-    "source_schema": "Production",
-    "source_table": "WorkOrderRouting",
-    "source_column": "WorkOrderID",
+    "source_schema": "Purchasing",
+    "source_table": "ProductVendor",
+    "source_column": "ProductID",
     "target_schema": "Production",
-    "target_table": "WorkOrder",
-    "target_column": "WorkOrderID"
+    "target_table": "Product",
+    "target_column": "ProductID"
+  },
+  {
+    "source_schema": "Purchasing",
+    "source_table": "ProductVendor",
+    "source_column": "UnitMeasureCode",
+    "target_schema": "Production",
+    "target_table": "UnitMeasure",
+    "target_column": "UnitMeasureCode"
   },
   {
     "source_schema": "Purchasing",
@@ -377,11 +417,19 @@
   },
   {
     "source_schema": "Purchasing",
+    "source_table": "PurchaseOrderDetail",
+    "source_column": "ProductID",
+    "target_schema": "Production",
+    "target_table": "Product",
+    "target_column": "ProductID"
+  },
+  {
+    "source_schema": "Purchasing",
     "source_table": "PurchaseOrderHeader",
-    "source_column": "ShipMethodID",
-    "target_schema": "Purchasing",
-    "target_table": "ShipMethod",
-    "target_column": "ShipMethodID"
+    "source_column": "EmployeeID",
+    "target_schema": "HumanResources",
+    "target_table": "Employee",
+    "target_column": "BusinessEntityID"
   },
   {
     "source_schema": "Purchasing",
@@ -392,17 +440,33 @@
     "target_column": "BusinessEntityID"
   },
   {
-    "source_schema": "Sales",
-    "source_table": "CountryRegionCurrency",
-    "source_column": "CurrencyCode",
-    "target_schema": "Sales",
-    "target_table": "Currency",
-    "target_column": "CurrencyCode"
+    "source_schema": "Purchasing",
+    "source_table": "PurchaseOrderHeader",
+    "source_column": "ShipMethodID",
+    "target_schema": "Purchasing",
+    "target_table": "ShipMethod",
+    "target_column": "ShipMethodID"
+  },
+  {
+    "source_schema": "Purchasing",
+    "source_table": "Vendor",
+    "source_column": "BusinessEntityID",
+    "target_schema": "Person",
+    "target_table": "BusinessEntity",
+    "target_column": "BusinessEntityID"
   },
   {
     "source_schema": "Sales",
-    "source_table": "CurrencyRate",
-    "source_column": "FromCurrencyCode",
+    "source_table": "CountryRegionCurrency",
+    "source_column": "CountryRegionCode",
+    "target_schema": "Person",
+    "target_table": "CountryRegion",
+    "target_column": "CountryRegionCode"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "CountryRegionCurrency",
+    "source_column": "CurrencyCode",
     "target_schema": "Sales",
     "target_table": "Currency",
     "target_column": "CurrencyCode"
@@ -417,6 +481,30 @@
   },
   {
     "source_schema": "Sales",
+    "source_table": "CurrencyRate",
+    "source_column": "FromCurrencyCode",
+    "target_schema": "Sales",
+    "target_table": "Currency",
+    "target_column": "CurrencyCode"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "Customer",
+    "source_column": "StoreID",
+    "target_schema": "Sales",
+    "target_table": "Store",
+    "target_column": "BusinessEntityID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "Customer",
+    "source_column": "PersonID",
+    "target_schema": "Person",
+    "target_table": "Person",
+    "target_column": "BusinessEntityID"
+  },
+  {
+    "source_schema": "Sales",
     "source_table": "Customer",
     "source_column": "TerritoryID",
     "target_schema": "Sales",
@@ -425,10 +513,10 @@
   },
   {
     "source_schema": "Sales",
-    "source_table": "Customer",
-    "source_column": "StoreID",
-    "target_schema": "Sales",
-    "target_table": "Store",
+    "source_table": "PersonCreditCard",
+    "source_column": "BusinessEntityID",
+    "target_schema": "Person",
+    "target_table": "Person",
     "target_column": "BusinessEntityID"
   },
   {
@@ -442,6 +530,22 @@
   {
     "source_schema": "Sales",
     "source_table": "SalesOrderDetail",
+    "source_column": "ProductID",
+    "target_schema": "Sales",
+    "target_table": "SpecialOfferProduct",
+    "target_column": "ProductID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "SalesOrderDetail",
+    "source_column": "SpecialOfferID",
+    "target_schema": "Sales",
+    "target_table": "SpecialOfferProduct",
+    "target_column": "SpecialOfferID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "SalesOrderDetail",
     "source_column": "SalesOrderID",
     "target_schema": "Sales",
     "target_table": "SalesOrderHeader",
@@ -449,43 +553,35 @@
   },
   {
     "source_schema": "Sales",
-    "source_table": "SalesOrderDetail",
-    "source_column": "SpecialOfferID",
+    "source_table": "SalesOrderHeader",
+    "source_column": "TerritoryID",
     "target_schema": "Sales",
-    "target_table": "SpecialOfferProduct",
-    "target_column": "SpecialOfferID"
-  },
-  {
-    "source_schema": "Sales",
-    "source_table": "SalesOrderDetail",
-    "source_column": "SpecialOfferID",
-    "target_schema": "Sales",
-    "target_table": "SpecialOfferProduct",
-    "target_column": "ProductID"
-  },
-  {
-    "source_schema": "Sales",
-    "source_table": "SalesOrderDetail",
-    "source_column": "ProductID",
-    "target_schema": "Sales",
-    "target_table": "SpecialOfferProduct",
-    "target_column": "SpecialOfferID"
-  },
-  {
-    "source_schema": "Sales",
-    "source_table": "SalesOrderDetail",
-    "source_column": "ProductID",
-    "target_schema": "Sales",
-    "target_table": "SpecialOfferProduct",
-    "target_column": "ProductID"
+    "target_table": "SalesTerritory",
+    "target_column": "TerritoryID"
   },
   {
     "source_schema": "Sales",
     "source_table": "SalesOrderHeader",
-    "source_column": "CreditCardID",
+    "source_column": "ShipMethodID",
+    "target_schema": "Purchasing",
+    "target_table": "ShipMethod",
+    "target_column": "ShipMethodID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "SalesOrderHeader",
+    "source_column": "SalesPersonID",
     "target_schema": "Sales",
-    "target_table": "CreditCard",
-    "target_column": "CreditCardID"
+    "target_table": "SalesPerson",
+    "target_column": "BusinessEntityID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "SalesOrderHeader",
+    "source_column": "BillToAddressID",
+    "target_schema": "Person",
+    "target_table": "Address",
+    "target_column": "AddressID"
   },
   {
     "source_schema": "Sales",
@@ -506,18 +602,18 @@
   {
     "source_schema": "Sales",
     "source_table": "SalesOrderHeader",
-    "source_column": "SalesPersonID",
-    "target_schema": "Sales",
-    "target_table": "SalesPerson",
-    "target_column": "BusinessEntityID"
+    "source_column": "ShipToAddressID",
+    "target_schema": "Person",
+    "target_table": "Address",
+    "target_column": "AddressID"
   },
   {
     "source_schema": "Sales",
     "source_table": "SalesOrderHeader",
-    "source_column": "TerritoryID",
+    "source_column": "CreditCardID",
     "target_schema": "Sales",
-    "target_table": "SalesTerritory",
-    "target_column": "TerritoryID"
+    "target_table": "CreditCard",
+    "target_column": "CreditCardID"
   },
   {
     "source_schema": "Sales",
@@ -538,6 +634,14 @@
   {
     "source_schema": "Sales",
     "source_table": "SalesPerson",
+    "source_column": "BusinessEntityID",
+    "target_schema": "HumanResources",
+    "target_table": "Employee",
+    "target_column": "BusinessEntityID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "SalesPerson",
     "source_column": "TerritoryID",
     "target_schema": "Sales",
     "target_table": "SalesTerritory",
@@ -553,11 +657,19 @@
   },
   {
     "source_schema": "Sales",
-    "source_table": "SalesTerritoryHistory",
-    "source_column": "BusinessEntityID",
-    "target_schema": "Sales",
-    "target_table": "SalesPerson",
-    "target_column": "BusinessEntityID"
+    "source_table": "SalesTaxRate",
+    "source_column": "StateProvinceID",
+    "target_schema": "Person",
+    "target_table": "StateProvince",
+    "target_column": "StateProvinceID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "SalesTerritory",
+    "source_column": "CountryRegionCode",
+    "target_schema": "Person",
+    "target_table": "CountryRegion",
+    "target_column": "CountryRegionCode"
   },
   {
     "source_schema": "Sales",
@@ -566,6 +678,30 @@
     "target_schema": "Sales",
     "target_table": "SalesTerritory",
     "target_column": "TerritoryID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "SalesTerritoryHistory",
+    "source_column": "BusinessEntityID",
+    "target_schema": "Sales",
+    "target_table": "SalesPerson",
+    "target_column": "BusinessEntityID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "ShoppingCartItem",
+    "source_column": "ProductID",
+    "target_schema": "Production",
+    "target_table": "Product",
+    "target_column": "ProductID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "SpecialOfferProduct",
+    "source_column": "ProductID",
+    "target_schema": "Production",
+    "target_table": "Product",
+    "target_column": "ProductID"
   },
   {
     "source_schema": "Sales",
@@ -581,6 +717,14 @@
     "source_column": "SalesPersonID",
     "target_schema": "Sales",
     "target_table": "SalesPerson",
+    "target_column": "BusinessEntityID"
+  },
+  {
+    "source_schema": "Sales",
+    "source_table": "Store",
+    "source_column": "BusinessEntityID",
+    "target_schema": "Person",
+    "target_table": "BusinessEntity",
     "target_column": "BusinessEntityID"
   }
 ]
