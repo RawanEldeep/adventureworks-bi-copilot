@@ -1,39 +1,63 @@
+
 """
 Buisness Intelligence Copilot
 
-Pipeline: 
+Pipeline:
 Natural Language Question
--> KnowledgeGraph traversal & Keyword Search   
--> Relevant Concepts and tables 
+-> KnowledgeGraph traversal & Keyword Search
+-> Relevant Concepts and tables
 -> LLM
 -> Generated SQL
 -> Answer
 
 """
-from dotenv import load_dotenv
-
-from KeywordRetrieval import KeywordRetriever
+from Retriever import HybridRetriever
 from SQLGenerator import SQLGenerator
 
-load_dotenv()
+QuitCommands = {"quit", "exit"}
+
+
+def PrintRetrieved(Retrieved: dict) -> None:
+    print(f"Tables: {Retrieved['tables']}")
+    print(f"Joins: {Retrieved['joins']}")
+    print(f"Matched concepts: {Retrieved['matched_concepts']}")
+
 
 def Main():
-    Retriever = KeywordRetriever()
+    print("Loading retriever and SQL generator (this can take a moment)...")
+    Retriever = HybridRetriever()
     Generator = SQLGenerator()
+    print("Ready. Ask a business question, or type 'quit'/'exit' to stop.\n")
 
-    Question = input("Ask a buisness question: ")
-    print(f"You asked: {Question}")
+    while True:
+        Question = input("Ask a business question: ").strip()
+        if not Question or Question.lower() in QuitCommands:
+            print("Goodbye.")
+            break
 
-    Results = Retriever.Retrieve(Question, TopK=5)
-    print("\nTop matching tables:")
-    if not Results:
-        print("No matches found")
-    for Entry in Results:
-        print(f"  {Entry['schema']}.{Entry['table']}  (score: {Entry['_score']})")
-    Sql = Generator.Generate(Question, Results)
-    print("\nGenerated SQL:")
-    print(Sql)
+        print(f"\n{'=' * 70}")
+        print(f"Question: {Question}")
+        print("=" * 70)
+
+        try:
+            Retrieved = Retriever.Retrieve(Question)
+        except Exception as E:
+            print(f"[ERROR] Retrieval failed: {E}")
+            print("Try again with a different question.\n")
+            continue
+
+        PrintRetrieved(Retrieved)
+
+        try:
+            Sql = Generator.Generate(Question, Retrieved)
+            print("\nGenerated SQL:")
+            print(Sql)
+        except Exception as E:
+            print(f"\n[ERROR] SQL generation failed: {E}")
+            print("(Retrieval above succeeded - only SQL generation failed.)")
+
+        print()
+
 
 if __name__ == "__main__":
     Main()
-
