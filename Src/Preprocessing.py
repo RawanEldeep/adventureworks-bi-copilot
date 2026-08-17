@@ -73,8 +73,9 @@ def TextProcessing(T: str) -> list[str]:
         if len(W) > 1 and W not in Stop and not W.isnumeric()
     ]
 
-    Tagged = pos_tag(Tokens)
-    return [SafeLemmatization(W, Tag) for W, Tag in Tagged]
+    #Tagged = pos_tag(Tokens)
+    #return [SafeLemmatization(W, Tag) for W, Tag in Tagged]
+    return Tokens
 
 """
 if __name__ == "__main__":
